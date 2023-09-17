@@ -6,5 +6,9 @@
         "age": "30",
         "salary": "12345",
         "department": "QA"
+    },
+    "updateDetails":{
+        "firstName": "Gerimedica",
+        "lastName": "BV"
     }
 }

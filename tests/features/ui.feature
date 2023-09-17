@@ -14,10 +14,24 @@ Feature: UI Automation
     # ◆ Department: QA
     # ➔ Put your assertions
 
-    Scenario: Scenario A - Verify user can enter new data into the table
+    # Scenario: Scenario A - Verify user can enter new data into the table
+    #     Given Go to the url '<URL>'
+    #     When Enter the data into table using detailsJSON values
+    #     Then Validate the newly created record
+    #     Examples:
+    #         | URL                 |
+    #         | https://demoqa.com/ |
+
+
+    # 2. TC01- Scenario B - Verify user can edit the row in a table
+    # ➔ Click on edit icon in the second row of the table that contains firstname “Aldren”
+    # ➔ Edit the First Name to “Gerimedica” and Last Name to “BV” and Hit save.
+    # ➔ Put your assertions
+
+    Scenario: TC01- Scenario B - Verify user can edit the row in a table
         Given Go to the url '<URL>'
-        When Enter the data into table using detailsJSON values
-        Then Validate the newly created record
+        When Update the user record from webtable
+        Then Validate the updated record
         Examples:
-            | URL                 | 
+            | URL                 |
             | https://demoqa.com/ |
