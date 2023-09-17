@@ -16,8 +16,8 @@ Feature: UI Automation
 
     Scenario: Scenario A - Verify user can enter new data into the table
         Given Go to the url '<URL>'
-        When Enter the data into table using these values '<firstname>' '<lastname>' '<age>' '<email>' '<salary>' '<department>' 
+        When Enter the data into table using detailsJSON values
         Then Validate the newly created record
         Examples:
-            | URL                 | firstname | lastname | age | email         | salary | department |
-            | https://demoqa.com/ | Alden     | Cantrell | 30  | test@test.com | 12345  | QA         |
+            | URL                 | 
+            | https://demoqa.com/ |

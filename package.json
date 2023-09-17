@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --require cucumber.js"    
+    "test": "cucumber-js --require cucumber.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
     "playwright": "^1.38.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.38.0"
   }
 }
