@@ -5,6 +5,7 @@ import { verifyImage } from '../page-objects/broken-images/verifyImage'
 import { practiceForm } from '../page-objects/forms/practiceForm'
 import { progressBar } from '../page-objects/progress-bar/progressBar';
 import { tootTip } from '../page-objects/tooltip/tooltip';
+import { dragDrop } from '../page-objects/drag-drop/drag';
 
 const insertion = new addData()
 const updation = new updateData()
@@ -12,6 +13,7 @@ const brokenImage = new verifyImage()
 const form = new practiceForm()
 const bar = new progressBar()
 const tooltip = new tootTip()
+const drag = new dragDrop()
 
 Given('Go to the url {string}', async function (url) {
     await insertion.open(url)
@@ -60,12 +62,12 @@ Then('Validate the entered data from popup', async function () {
 When('Naigate to the widget and start the progress bar', async function () {
     await bar.navigateToProgressBar()
     await bar.startTheProgressBar()
-  });
+});
 
-  Then('Validate the progress bar', async function () {
+Then('Validate the progress bar', async function () {
 
     await bar.validateProgressbar()
-  });
+});
 
 // Scenario 5 Progress bar end
 
@@ -74,10 +76,21 @@ When('Naigate to the widget and start the progress bar', async function () {
 When('Navigate to the widget tooltip and hover the button', async function () {
     await tooltip.navigateTotoolTip()
     await tooltip.getHoverButtonText()
-  });
+});
 
-  Then('Validate the tooltip', async function () {
+Then('Validate the tooltip', async function () {
     await tooltip.validateHoverText()
-  });
+});
 
 // Scenario 6 Verify the tooltip end
+
+//Scenario 7 Start
+When('Navigate to the interactions droppable perform drag and drop', async function () {
+    await drag.navigatedragDropInteraction()
+    await drag.dragDrop()
+});
+
+Then('Validate the drag and drop', async function () {
+    console.log('testing')
+});
+//Scenario 7 End

@@ -48,9 +48,16 @@ Feature: UI Automation
 #             | URL                 |
 #             | https://demoqa.com/ |
 
-# TC06 - Verify user can drag and drop
+# 
 # ➔ Go to url https://demoqa.com/
 # ➔ Navigate to Interactions >> Droppable
 # ➔ Drag the “Drag me” box to “Drop Here” area
-
 # ➔ Put your assertions
+
+   Scenario: TC06 - Verify user can drag and drop
+        Given Go to the url '<URL>'
+        When Navigate to the interactions droppable perform drag and drop
+        Then Validate the drag and drop
+        Examples:
+            | URL                 |
+            | https://demoqa.com/ |
