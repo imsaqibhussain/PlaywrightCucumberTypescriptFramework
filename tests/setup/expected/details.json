@@ -1,14 +1,22 @@
 {
-    "userDetails": {
-        "Email": "test@test.com",
-        "firstName": "Alden",
-        "lastName": "Cantrell",
-        "age": "30",
-        "salary": "12345",
-        "department": "QA"
-    },
-    "updateDetails":{
-        "firstName": "Gerimedica",
-        "lastName": "BV"
-    }
+  "userDetails": {
+    "Email": "test@test.com",
+    "firstName": "Alden",
+    "lastName": "Cantrell",
+    "age": "30",
+    "salary": "12345",
+    "department": "QA"
+  },
+  "updateDetails": {
+    "firstName": "Gerimedica",
+    "lastName": "BV"
+  },
+  "existingDetails": {
+    "Email": "alden@example.com",
+    "firstName": "Alden",
+    "lastName": "Cantrell",
+    "age": "45",
+    "salary": "12000",
+    "department": "Compliance"
+  }
 }

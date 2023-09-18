@@ -21,11 +21,37 @@ export class updateData {
     get_department = "//div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/div[6]"
     
     async updateDatafromWebTable() {
+
         const details: any = await utility.readUserDetails();
         console.log('setup/expected/details.json file values: ', details.updateDetails)
+
         // Click on the element tab, web table, and add button
         await page.click(this.elementTab);
         await page.click(this.webTable);
+
+        //get all data before updating the details
+        const f_name = await page.innerText(this.get_firstName)
+        const l_name = await page.innerText(this.get_lastName)
+        const age = await page.innerText(this.get_age)
+        const email = await page.innerText(this.get_email)
+        const salary = await page.innerText(this.get_salary)
+        const department = await page.innerText(this.get_department)
+
+        //assinging row 2 existing data to oldDetails object
+        const oldDetails = {
+            "Email": email,
+            "firstName": f_name,
+            "lastName": l_name,
+            "age": age,
+            "salary": salary,
+            "department": department
+        }
+        // assigning oldDetails object to details.existingDetails
+        details.existingDetails = oldDetails
+        //saving row 2 all existing records into the existingDetails object.
+        await utility.writeJSONToFile('details.json', details)
+
+        //Edit the record
         await page.click(this.edit);
          // update the form with user details
         await page.fill(this.firstName, details.updateDetails.firstName);
@@ -52,9 +78,10 @@ export class updateData {
         // Define data titles, actual data, and expected data
         title.push("First Name", "Last Name", "Age", "Email", "Salary", "Department");
         actual.push(f_name, l_name, age, email, salary, department);
-        expected.push(details.updateDetails.firstName, details.updateDetails.lastName, details.userDetails.age, details.userDetails.Email, details.userDetails.salary, details.userDetails.department);
+        expected.push(details.updateDetails.firstName, details.updateDetails.lastName, details.existingDetails.age, details.existingDetails.Email, details.existingDetails.salary, details.existingDetails.department);
     
         // Perform data validation using the utility function
         await utility.valueValidations(actual, expected, title, "Newly Added Record Validation");
+
     }
 }

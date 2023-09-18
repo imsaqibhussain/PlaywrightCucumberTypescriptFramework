@@ -1,6 +1,7 @@
 import { expect } from '@playwright/test';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import fs from 'fs';
 
 export class Utilities {
 
@@ -13,6 +14,18 @@ export class Utilities {
         return details;
     }
 
+    // Function to write data to a JSON file
+    async writeJSONToFile(filename, data) {
+        // Convert the data to a JSON string
+        const jsonData = JSON.stringify(data, null, 2); // The second argument adds formatting for readability
+
+        // Write the JSON data to the file
+        fs.writeFileSync(`tests/setup/expected/${filename}`, jsonData, 'utf8');
+
+        console.log(`Data has been written to ${filename}`);
+    }
+
+
     async valueValidations(
         actual: any,
         expected: any,
@@ -24,21 +37,19 @@ export class Utilities {
 
         if (Array.isArray(title)) {
             for (let i = 0; i < title.length; i++) {
-                console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Verifying Field => ' + title[i] +'  %%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n');
+                console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Verifying Field => ' + title[i] + '  %%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n');
                 console.log(title[i] + ': Received values are => ' + actual[i]);
                 console.log(title[i] + ': Expected values from json => ' + expected[i]);
                 console.log('Actual Value ' + i + ' : ' + actual[i] + ' & Expected Value is =' + expected[i]);
                 await expect(actual[i]).toEqual(expected[i]);
             }
         } else {
-            console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Verifying Field => ' + title +'  %%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n');
+            console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Verifying Field => ' + title + '  %%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n');
             console.log(title + ': Received values are => ' + actual);
             console.log(title + ': Expected values from json => ' + expected);
             console.log('Actual Value ' + ' : ' + actual + ' & Expected Value is =' + expected);
             await expect(actual).toEqual(expected);
         }
-        console.log('\n' +'==============\u001b[1;35mMatching Function Call End\u001b[1;37m===============' +'\n');
+        console.log('\n' + '==============\u001b[1;35mMatching Function Call End\u001b[1;37m===============' + '\n');
     }
-
-
 }
