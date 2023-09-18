@@ -16,16 +16,35 @@ Feature: UI Automation
     #         | URL                 |
     #         | https://demoqa.com/ |
 
+    # Scenario: TC02 - Verify broken image
+    #     Given Go to the url '<URL>'
+    #     When Naigate to the broken image section
+    #     Then Validate the broken image
+    #     Examples:
+    #         | URL                 |
+    #         | https://demoqa.com/ |
 
-    # 3. TC02 - Verify broken image
-    # ➔ Go to url https://demoqa.com/
-    # ➔ Navigate to “Elements”>>“Broken Links-Images”
-    # ➔ Put your assertions for the first broken image
+# TC03 - Verify user can submit the form.
+# ➔ Go to url https://demoqa.com/
+# ➔ Navigate to Forms>>Practice Form
+# ➔ Enter all the input fields including picture and hit Submit
+# ◆ First Name: Gerimedica
+# ◆ Last Name : BV
+# ◆ Email: test@test.com
+# ◆ Gender : Male
+# ◆ Mobile: 0123456789
+# ◆ Date of Birth: 15th January 1990
+# ◆ Subjects: Playwright Assignment
+# ◆ Hobbies: Reading
+# ◆ Select any picture
+# ◆ Current Address: Netherlands
+# ◆ State and City : NCR, Delhi
+# ➔ Put your assertions
 
-    Scenario: TC02 - Verify broken image
+   Scenario: TC03 - Verify user can submit the form
         Given Go to the url '<URL>'
-        When Naigate to the broken image section
-        Then Validate the broken image
+        When Naigate to the practice form and submit with filled details
+        Then Validate the entered data from popup
         Examples:
             | URL                 |
             | https://demoqa.com/ |

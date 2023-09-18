@@ -25,7 +25,6 @@ export class Utilities {
         console.log(`Data has been written to ${filename}`);
     }
 
-
     async valueValidations(
         actual: any,
         expected: any,

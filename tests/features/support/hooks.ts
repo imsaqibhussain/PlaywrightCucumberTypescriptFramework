@@ -118,7 +118,10 @@ async function createPageContext() {
 
 // Function to set up the context and page
 Before(async () => {
-  context = await browser?.newContext();
+  context = await browser?.newContext({
+      viewport: { width: 1920, height: 1080 }, // Set the desired viewport size
+    }
+  );
   page = await context?.newPage();
 });
 
