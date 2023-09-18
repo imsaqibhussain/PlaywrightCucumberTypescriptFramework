@@ -24,27 +24,23 @@ Feature: UI Automation
     #         | URL                 |
     #         | https://demoqa.com/ |
 
-# TC03 - Verify user can submit the form.
+#    Scenario: TC03 - Verify user can submit the form
+#         Given Go to the url '<URL>'
+#         When Naigate to the practice form and submit with filled details
+#         Then Validate the entered data from popup
+#         Examples:
+#             | URL                 |
+#             | https://demoqa.com/ |
+
 # ➔ Go to url https://demoqa.com/
-# ➔ Navigate to Forms>>Practice Form
-# ➔ Enter all the input fields including picture and hit Submit
-# ◆ First Name: Gerimedica
-# ◆ Last Name : BV
-# ◆ Email: test@test.com
-# ◆ Gender : Male
-# ◆ Mobile: 0123456789
-# ◆ Date of Birth: 15th January 1990
-# ◆ Subjects: Playwright Assignment
-# ◆ Hobbies: Reading
-# ◆ Select any picture
-# ◆ Current Address: Netherlands
-# ◆ State and City : NCR, Delhi
+# ➔ Navigate to Widget >> Progress Bar
+# ➔ Click on start the progress bar
 # ➔ Put your assertions
 
-   Scenario: TC03 - Verify user can submit the form
+   Scenario: TC04 - Verify the progress bar
         Given Go to the url '<URL>'
-        When Naigate to the practice form and submit with filled details
-        Then Validate the entered data from popup
+        When Naigate to the widget and start the progress bar
+        Then Validate the progress bar
         Examples:
             | URL                 |
             | https://demoqa.com/ |

@@ -3,11 +3,13 @@ import { addData } from '../page-objects/web-tables/addData';
 import { updateData } from '../page-objects/web-tables/updateData';
 import { verifyImage } from '../page-objects/broken-images/verifyImage'
 import { practiceForm } from '../page-objects/forms/practiceForm'
+import { progressBar } from '../page-objects/progress-bar/progressBar';
 
 const insertion = new addData()
 const updation = new updateData()
 const brokenImage = new verifyImage()
 const form = new practiceForm()
+const bar = new progressBar()
 
 Given('Go to the url {string}', async function (url) {
     await insertion.open(url)
@@ -51,3 +53,16 @@ Then('Validate the entered data from popup', async function () {
 });
 //Scenario 4: practice form end
 
+// Scenario 5 Progress bar
+
+When('Naigate to the widget and start the progress bar', async function () {
+    await bar.navigateToProgressBar()
+    await bar.startTheProgressBar()
+  });
+
+  Then('Validate the progress bar', async function () {
+
+    await bar.validateProgressbar()
+  });
+
+// Scenario 5 Progress bar end
