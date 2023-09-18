@@ -32,15 +32,25 @@ Feature: UI Automation
 #             | URL                 |
 #             | https://demoqa.com/ |
 
-# ➔ Go to url https://demoqa.com/
-# ➔ Navigate to Widget >> Progress Bar
-# ➔ Click on start the progress bar
-# ➔ Put your assertions
+#    Scenario: TC04 - Verify the progress bar
+#         Given Go to the url '<URL>'
+#         When Naigate to the widget and start the progress bar
+#         Then Validate the progress bar
+#         Examples:
+#             | URL                 |
+#             | https://demoqa.com/ |
 
-   Scenario: TC04 - Verify the progress bar
-        Given Go to the url '<URL>'
-        When Naigate to the widget and start the progress bar
-        Then Validate the progress bar
-        Examples:
-            | URL                 |
-            | https://demoqa.com/ |
+#    Scenario: TC05 - Verify the tooltip
+#         Given Go to the url '<URL>'
+#         When Navigate to the widget tooltip and hover the button
+#         Then Validate the tooltip
+#         Examples:
+#             | URL                 |
+#             | https://demoqa.com/ |
+
+# TC06 - Verify user can drag and drop
+# ➔ Go to url https://demoqa.com/
+# ➔ Navigate to Interactions >> Droppable
+# ➔ Drag the “Drag me” box to “Drop Here” area
+
+# ➔ Put your assertions

@@ -31,5 +31,7 @@
     "selectAnyPicture" : "picture.jpg",
     "currentAddress": "Netherlands",
     "stateCity" : "NCR, Delhi"
-  }
+  },
+  "progressBar": "100",
+  "hoverText": "You hovered over the Button"
 }

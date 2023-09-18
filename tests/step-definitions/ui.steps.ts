@@ -4,12 +4,14 @@ import { updateData } from '../page-objects/web-tables/updateData';
 import { verifyImage } from '../page-objects/broken-images/verifyImage'
 import { practiceForm } from '../page-objects/forms/practiceForm'
 import { progressBar } from '../page-objects/progress-bar/progressBar';
+import { tootTip } from '../page-objects/tooltip/tooltip';
 
 const insertion = new addData()
 const updation = new updateData()
 const brokenImage = new verifyImage()
 const form = new practiceForm()
 const bar = new progressBar()
+const tooltip = new tootTip()
 
 Given('Go to the url {string}', async function (url) {
     await insertion.open(url)
@@ -66,3 +68,16 @@ When('Naigate to the widget and start the progress bar', async function () {
   });
 
 // Scenario 5 Progress bar end
+
+// Scenario 6 Verify the tooltip
+
+When('Navigate to the widget tooltip and hover the button', async function () {
+    await tooltip.navigateTotoolTip()
+    await tooltip.getHoverButtonText()
+  });
+
+  Then('Validate the tooltip', async function () {
+    await tooltip.validateHoverText()
+  });
+
+// Scenario 6 Verify the tooltip end
