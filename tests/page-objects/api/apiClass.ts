@@ -172,6 +172,8 @@ export class APIClass {
     }
 
     async generateTokenWithWrongCredentials() {
+
+        console.log('###### Running the unhappy Scenario!.. ######')
         const details = await utility.readAPIDetails();
         // Define the API URL
         const apiUrl = details.generateToken.apiUrl
