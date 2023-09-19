@@ -5,20 +5,29 @@
     "apiUrl": "https://demoqa.com/Account/v1/User"
   },
   "createdUser": {
-    "username": "saqib8216",
+    "username": "saqib1221",
     "password": "Test@1234",
-    "userID": "f7ed93c4-ea0a-4a94-81aa-6ecc447c0a41"
+    "userID": "83c45a11-a563-4e8f-843e-66a8137dda8e"
   },
   "generateToken": {
     "apiUrl": "https://demoqa.com/Account/v1/GenerateToken"
   },
   "generatedToken": {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InNhcWliODIxNiIsInBhc3N3b3JkIjoiVGVzdEAxMjM0IiwiaWF0IjoxNjk1MTA4MTY3fQ.8NEEZKysfqcO-h1D4Vm5paxbH_WMHwfsYiPf0zj433o"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InNhcWliMTIyMSIsInBhc3N3b3JkIjoiVGVzdEAxMjM0IiwiaWF0IjoxNjk1MTE0ODQ1fQ.Hbrkdi5slobbSkU-OAm3Xzw58iFQnyZYIxoLuVEUBj0"
   },
   "books": {
     "apiUrl": "https://demoqa.com/BookStore/v1/Books"
   },
   "availableBooks": [
+    {
+      "isbn": "9781449331818"
+    },
+    {
+      "isbn": "9781449337711"
+    },
+    {
+      "isbn": "9781449365035"
+    },
     {
       "isbn": "9781491904244"
     },
@@ -37,5 +46,9 @@
   },
   "deleteBook": {
     "apiUrl": "https://demoqa.com/BookStore/v1/Book"
+  },
+  "invalidUser": {
+    "username": "string",
+    "password": "string"
   }
 }

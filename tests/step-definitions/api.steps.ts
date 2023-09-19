@@ -15,4 +15,8 @@ When('Add a list of Book against the user', async function () {
 
 Then('Remove one of added Book', async function () {
     await apiCall.removeBookagainstUser()
-  });
+});
+
+Given('generate token with wrong credentials', async function () {
+    await apiCall.generateTokenWithWrongCredentials()
+});
