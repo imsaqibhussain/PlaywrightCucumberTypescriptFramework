@@ -5,6 +5,25 @@ import fs from 'fs';
 
 export class Utilities {
 
+    async enterRandomNumber(length: number) {
+        let result = '';
+        const characters = '0123456789';
+        const charactersLength = characters.length;
+        for (let i = 0; i < length; i++) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+      }
+
+      async readAPIDetails() {
+        const userDetails = readFileSync(
+            join('tests/setup/expected/api.json'),
+            'utf-8'
+        );
+        const details = await JSON.parse(userDetails);
+        return details;
+    }
+
     async readUserDetails() {
         const userDetails = readFileSync(
             join('tests/setup/expected/details.json'),

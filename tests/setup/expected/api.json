@@ -1,0 +1,41 @@
+{
+  "createNewUser": {
+    "username": "saqib",
+    "password": "Test@1234",
+    "apiUrl": "https://demoqa.com/Account/v1/User"
+  },
+  "createdUser": {
+    "username": "saqib8216",
+    "password": "Test@1234",
+    "userID": "f7ed93c4-ea0a-4a94-81aa-6ecc447c0a41"
+  },
+  "generateToken": {
+    "apiUrl": "https://demoqa.com/Account/v1/GenerateToken"
+  },
+  "generatedToken": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InNhcWliODIxNiIsInBhc3N3b3JkIjoiVGVzdEAxMjM0IiwiaWF0IjoxNjk1MTA4MTY3fQ.8NEEZKysfqcO-h1D4Vm5paxbH_WMHwfsYiPf0zj433o"
+  },
+  "books": {
+    "apiUrl": "https://demoqa.com/BookStore/v1/Books"
+  },
+  "availableBooks": [
+    {
+      "isbn": "9781491904244"
+    },
+    {
+      "isbn": "9781491950296"
+    },
+    {
+      "isbn": "9781593275846"
+    },
+    {
+      "isbn": "9781593277574"
+    }
+  ],
+  "addBooks": {
+    "apiUrl": "https://demoqa.com/BookStore/v1/Books"
+  },
+  "deleteBook": {
+    "apiUrl": "https://demoqa.com/BookStore/v1/Book"
+  }
+}

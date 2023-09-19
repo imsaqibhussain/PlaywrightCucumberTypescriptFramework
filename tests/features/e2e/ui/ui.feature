@@ -48,7 +48,6 @@ Feature: UI Automation
             | URL                 |
             | https://demoqa.com/ |
 
-
     Scenario: TC06- Scenario G - Verify user can drag and drop
         Given Go to the url '<URL>'
         When Navigate to the interactions droppable perform drag and drop
