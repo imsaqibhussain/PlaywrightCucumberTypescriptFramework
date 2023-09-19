@@ -19,10 +19,12 @@ export class progressBar {
 
   async startTheProgressBar() {
     await page.click(this.start)
+    await utility.delay(9000)
   }
 
   async validateProgressbar() {
     const details = await utility.readUserDetails();
+    await utility.delay(1000)
     // Get the maximum percentage from progress bar
     const percntage = await page.$eval('[role="progressbar"]', (progressBar) =>
       progressBar.getAttribute('aria-valuemax')

@@ -19,18 +19,18 @@
     "salary": "12000",
     "department": "Compliance"
   },
-  "practiceForm":{
+  "practiceForm": {
     "firstName": "Gerimedica",
-    "lastName" : "BV",
+    "lastName": "BV",
     "Email": "test@test.com",
-    "Gender" : "Male",
-    "Mobile" : "0123456789",
-    "dateofBirth" : "15th January 1990",
+    "Gender": "Male",
+    "Mobile": "0123456789",
+    "dateofBirth": "15th January 1990",
     "Subjects": "Playwright Assignment",
     "Hobbies": "Reading",
-    "selectAnyPicture" : "picture.jpg",
+    "selectAnyPicture": "picture.jpg",
     "currentAddress": "Netherlands",
-    "stateCity" : "NCR, Delhi"
+    "stateCity": "NCR, Delhi"
   },
   "progressBar": "100",
   "hoverText": "You hovered over the Button",

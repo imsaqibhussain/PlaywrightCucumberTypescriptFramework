@@ -5,6 +5,10 @@ import fs from 'fs';
 
 export class Utilities {
 
+    async delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     async enterRandomNumber(length: number) {
         let result = '';
         const characters = '0123456789';
