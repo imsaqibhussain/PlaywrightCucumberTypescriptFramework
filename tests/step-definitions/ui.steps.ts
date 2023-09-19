@@ -26,7 +26,7 @@ When('Enter the data into table using detailsJSON values', async function () {
 Then('Validate the newly created record', async function () {
     await insertion.validateAddedData()
 });
-
+// Scenario 2
 When('Update the user record from webtable', async function () {
     await updation.updateDatafromWebTable()
 });
@@ -34,6 +34,7 @@ When('Update the user record from webtable', async function () {
 Then('Validate the updated record', async function () {
     await updation.validateUpdatedRecordfromWebTable()
 });
+// Scenario 2 end
 
 // Scenario 3 Borken Image Start
 When('Naigate to the broken image section', async function () {
@@ -91,6 +92,6 @@ When('Navigate to the interactions droppable perform drag and drop', async funct
 });
 
 Then('Validate the drag and drop', async function () {
-    console.log('testing')
+    await drag.validateDragDrop()
 });
 //Scenario 7 End

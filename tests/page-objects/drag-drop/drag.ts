@@ -10,6 +10,7 @@ export class dragDrop {
     draggableItem = "//div[@class='simple-drop-container']//div[1]"
     targetItem = "(//div[@class='simple-drop-container']//div)[2]"
     simpleDropContainer = "#simpleDropContainer"
+    droptext = "//div[@id='droppable']//p"
 
     async navigatedragDropInteraction() {
         await page.click(this.interaction)
@@ -22,5 +23,19 @@ export class dragDrop {
         await page.waitForSelector(this.targetItem)
         await page.waitForTimeout(2000);
         await page.locator(this.draggableItem).dragTo(page.locator(this.targetItem));  
+    }
+
+    async validateDragDrop(){
+        const droppedBoxText = await page.innerText(this.droptext)
+        const details = await utility.readUserDetails();
+        const expected = details.droppedText
+        const actual = droppedBoxText
+        const title = "Drag Drop Text"
+        await utility.valueValidations(
+            actual,
+            expected,
+            title,
+            "Drop and Drop functionality Verification"
+        )
     }
 }

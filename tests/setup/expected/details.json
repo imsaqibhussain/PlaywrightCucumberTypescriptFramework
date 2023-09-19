@@ -33,5 +33,6 @@
     "stateCity" : "NCR, Delhi"
   },
   "progressBar": "100",
-  "hoverText": "You hovered over the Button"
+  "hoverText": "You hovered over the Button",
+  "droppedText": "Dropped!"
 }
