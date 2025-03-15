@@ -1,0 +1,105 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "ui-automation;scenario-a---verify-user-can-enter-new-data-into-the-table",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Scenario A - Verify user can enter new data into the table",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 251768499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Go to the url 'https://demoqa.com/'",
+            "match": {
+              "location": "tests\\step-definitions\\ui.steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15087544599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "Enter the data into table using detailsJSON values",
+            "match": {
+              "location": "tests\\step-definitions\\ui.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9499470399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Validate the newly created record",
+            "match": {
+              "location": "tests\\step-definitions\\ui.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2851862700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Update the user record from webtable",
+            "match": {
+              "location": "tests\\step-definitions\\ui.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5651458300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Validate the updated record",
+            "match": {
+              "location": "tests\\step-definitions\\ui.steps.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1905948599
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 137815399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "ui-automation",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "UI Automation",
+    "tags": [],
+    "uri": "tests\\features\\e2e\\ui\\dev.feature"
+  }
+]
