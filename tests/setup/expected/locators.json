@@ -6,5 +6,6 @@
         "//div[contains(@class,'card mt-4')]//div"
       ],
     "webTable" : "//li[@id='item-3']",
-    "webTableRecordRow": "#edit-record-4"
+    "webTableRecordRow": "#edit-record-4",
+    "brokenImage" : "//li[@id='item-6']"
 }

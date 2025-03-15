@@ -1,6 +1,6 @@
 import { expect } from 'playwright/test';
 import axios from 'axios';
-import { Utilities } from '../utilities';
+import { Utilities } from '../common/utilities';
 
 const utility = new Utilities()
 

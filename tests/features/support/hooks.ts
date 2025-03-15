@@ -3,7 +3,7 @@ import { Status, setDefaultTimeout } from '@cucumber/cucumber';
 import { Browser, BrowserContext, chromium, Page } from 'playwright';
 import fs from 'fs';
 import path from 'path';
-import { Utilities } from '../../page-objects/utilities';
+import { Utilities } from '../../page-objects/common/utilities';
 const utility = new Utilities();
 let scenarioName: any;
 let oldvideoPath: any;

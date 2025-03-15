@@ -1,7 +1,7 @@
 import { expect } from '@playwright/test';
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { AutoCapture } from './AutoCapture';
+import { AutoCapture } from '../AutoCapture';
 import fs from 'fs';
 
 const capture = new AutoCapture()

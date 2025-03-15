@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "ui-automation;scenario-a---verify-user-can-enter-new-data-into-the-table",
+        "id": "ui-automation;tc02--scenario-c---verify-broken-image",
         "keyword": "Scenario",
-        "line": 11,
-        "name": "Scenario A - Verify user can enter new data into the table",
+        "line": 9,
+        "name": "TC02- Scenario C - Verify broken image",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 251768499
+              "duration": 139677100
             }
           },
           {
@@ -27,59 +27,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 15087544599
+              "duration": 7556095899
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 5,
-            "name": "Enter the data into table using detailsJSON values",
+            "name": "Naigate to the broken image section",
             "match": {
-              "location": "tests\\step-definitions\\ui.steps.ts:22"
+              "location": "tests\\step-definitions\\ui.steps.ts:40"
             },
             "result": {
               "status": "passed",
-              "duration": 9499470399
+              "duration": 2027492900
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "Validate the newly created record",
+            "name": "Validate the broken image",
             "match": {
-              "location": "tests\\step-definitions\\ui.steps.ts:26"
+              "location": "tests\\step-definitions\\ui.steps.ts:44"
             },
             "result": {
               "status": "passed",
-              "duration": 2851862700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 7,
-            "name": "Update the user record from webtable",
-            "match": {
-              "location": "tests\\step-definitions\\ui.steps.ts:30"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5651458300
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "Validate the updated record",
-            "match": {
-              "location": "tests\\step-definitions\\ui.steps.ts:34"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1905948599
+              "duration": 9924499
             }
           },
           {
@@ -87,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 137815399
+              "duration": 107553299
             }
           }
         ],

@@ -1,8 +1,4 @@
-import { page } from '../../features/support/hooks';
-import locators from '../../setup/expected/locators.json'
-import { Utilities } from '../utilities';
-import dynamic_locators from '../../../dynamic_locators.json'
-import { addData } from './addData';
+import { page , locators ,Utilities,dynamic_locators, addData } from '../common/commonImports';
 
 const utility = new Utilities();
 const add = new addData()

@@ -1,7 +1,4 @@
-import { page } from '../../features/support/hooks';
-import { Utilities } from '../utilities';
-import { SelfHealingLocator } from '../selfHealingLocator';
-import locators from '../../setup/expected/locators.json'
+import { page, Utilities, SelfHealingLocator, locators } from '../common/commonImports';
 
 const utility = new Utilities();
 

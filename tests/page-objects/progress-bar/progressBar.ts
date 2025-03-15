@@ -1,5 +1,5 @@
 import { page } from '../../features/support/hooks';
-import { Utilities } from '../utilities';
+import { Utilities } from '../common/utilities';
 
 const utility = new Utilities()
 
