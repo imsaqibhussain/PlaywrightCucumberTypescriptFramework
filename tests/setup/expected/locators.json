@@ -1,0 +1,10 @@
+{
+    "elementButton" : [
+        "div[class='category-cards'] div:nth-child(1) div:nth-child(1) div:nth-child(3) h5:nth-child(1)",
+        "//h5[normalize-space()='Elements']",
+        "(//h5[normalize-space()='Elements'])[1]",
+        "//div[contains(@class,'card mt-4')]//div"
+      ],
+    "webTable" : "//li[@id='item-3']",
+    "webTableRecordRow": "#edit-record-4"
+}

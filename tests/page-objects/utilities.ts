@@ -1,7 +1,10 @@
 import { expect } from '@playwright/test';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { AutoCapture } from './AutoCapture';
 import fs from 'fs';
+
+const capture = new AutoCapture()
 
 export class Utilities {
 
@@ -28,9 +31,18 @@ export class Utilities {
         return details;
     }
 
+    
+    async readExpectedDetails() {
+        const userDetails = readFileSync(
+            join('tests/setup/expected/expected.json'),
+            'utf-8'
+        );
+        const details = await JSON.parse(userDetails);
+        return details;
+    }
     async readUserDetails() {
         const userDetails = readFileSync(
-            join('tests/setup/expected/details.json'),
+            join('tests/setup/expected/common.json'),
             'utf-8'
         );
         const details = await JSON.parse(userDetails);
@@ -74,4 +86,16 @@ export class Utilities {
         }
         console.log('\n' + '==============\u001b[1;35mMatching Function Call End\u001b[1;37m===============' + '\n');
     }
+
+    async captureLocatorandSave(){
+
+        await capture.captureLocators()
+        let readDynamicLocators = readFileSync(
+          join('dynamic_locators.json'),
+          'utf-8'
+        );
+        return await JSON.parse(readDynamicLocators);
+    
+      }
+    
 }

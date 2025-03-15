@@ -56,3 +56,11 @@ To run tests, you can use the following npm scripts defined in package.json:
 **To run API tests:**
 
 	npm test tests/features/e2e/api/api.feature
+
+
+**Features**
+
+- Self healing locators implemented
+- Dynamic locators implemeted, in this i am keeping all type of locator id, css, xpath in my json file, to make avoid script failure due to locators
+- All locators removed from clases files, now all locators are in locators.json file, so we can reuse them anywhere and it is easy to access from anywhere, and keep code clean
+- Auto Capture: I am auto capturing locators, so my script work with real time locators instead of hard coding them.

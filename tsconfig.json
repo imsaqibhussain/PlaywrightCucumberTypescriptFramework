@@ -4,7 +4,8 @@
     "target": "es6",
     "module": "commonjs",
     "esModuleInterop": true,
-    "composite": true
+    "composite": true,
+    "resolveJsonModule": true,
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
     /* Projects */

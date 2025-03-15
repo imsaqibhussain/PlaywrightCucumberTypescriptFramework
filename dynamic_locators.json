@@ -1,0 +1,16 @@
+{
+  "close_fixedban": "#close-fixedban",
+  "addnewrecordbutton": "#addNewRecordButton",
+  "type_to_search": "#searchBox",
+  "previous": ".-btn",
+  "jump_to_page": "input[type=\"number\"]",
+  "rows_per_page": "//*[@id=\"app\"]/*[1]/*[1]/*[1]/*[2]/*[2]/*[3]/*[2]/*[1]/*[2]/*[2]/*[1]",
+  "close": ".close",
+  "first_name": "#firstName",
+  "last_name": "#lastName",
+  "name_example_com": "#userEmail",
+  "age": "#age",
+  "salary": "#salary",
+  "department": "#department",
+  "submit": "#submit"
+}

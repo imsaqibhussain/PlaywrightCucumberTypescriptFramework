@@ -1,0 +1,22 @@
+{
+  "existingDetails": {
+    "Email": "test@test.com",
+    "firstName": "Saqib",
+    "lastName": "Hussain",
+    "age": "32",
+    "salary": "50000",
+    "department": "IT/QA Automation"
+  },
+  "empDetails": {
+    "Email": "test@test.com",
+    "firstName": "Saqib",
+    "lastName": "Hussain",
+    "age": "32",
+    "salary": "50000",
+    "department": "IT/QA Automation"
+  },
+  "updatedDetails": {
+    "firstName": "update",
+    "lastName": "Test"
+  }
+}
